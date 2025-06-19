@@ -192,17 +192,12 @@ We welcome contributions to make Agora even better! Please feel free to:
 4. 📤 Push to the branch (`git push origin feature/amazing-feature`)
 5. 🔄 Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📞 Support
 
-Having issues? We're here to help!
+Having issues?
 
 - 🌐 **Website**: [shopatagora.com](https://www.shopatagora.com)
-- 📧 **Email**: support@shopatagora.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/agora/issues)
+- 📧 **Email**: agoraupenn@gmail.com
 
 ---
 
