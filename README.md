@@ -1,112 +1,215 @@
-Agora — Your Campus Marketplace
-🌐 www.shopatagora.com
+# 🎓 Agora — Your Campus Marketplace
 
-Agora is a modern, full-stack peer-to-peer marketplace tailored for college campuses. It empowers students to buy and sell items (books, clothes, dorm essentials, etc.) in a trusted, university-verified community. The platform includes features like Stripe Connect integration, real-time notifications, email verification, and a clean mobile-responsive UI powered by React and Tailwind.
+<div align="center">
 
-🧱 Tech Stack
-Frontend:
+[![Website](https://img.shields.io/badge/Website-shopatagora.com-blue?style=for-the-badge&logo=internet-explorer)](https://www.shopatagora.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-97.2%25-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 
-React + TypeScript
+*A modern, full-stack peer-to-peer marketplace tailored for college campuses*
 
-TailwindCSS
+</div>
 
-SuperTokens for auth
+---
 
-Axios for API calls
+## 🌟 Overview
 
-Backend:
+Agora empowers students to **buy and sell items** (books, clothes, dorm essentials, and more) within a **trusted, university-verified community**. Built with modern web technologies, Agora provides a seamless marketplace experience with secure payments, real-time notifications, and a mobile-first design.
 
-Node.js + Express
+## ✨ Key Features
 
-TypeScript
+<table>
+<tr>
+<td width="50%">
 
-PostgreSQL
+### 🔐 **Authentication & Security**
+- University-verified authentication flow
+- SuperTokens integration
+- Email verification system
+- Secure user sessions
 
-Stripe API (Payments & Connect)
+### 💰 **Payments & Commerce**
+- Stripe Connect for seller payouts
+- Full cart and checkout system
+- Automated receipt generation
+- Order tracking and management
 
-AWS S3 (Media Uploads)
+</td>
+<td width="50%">
 
-Nodemailer + React Email
+### 📱 **User Experience**
+- Fully responsive mobile layout
+- Real-time notifications
+- Product image uploads with previews
+- Intuitive seller dashboard
 
-Dev Tools:
+### 📧 **Communication**
+- Email verification flows
+- Purchase receipts
+- Order status reminders
+- Automated notifications
 
-ESLint
+</td>
+</tr>
+</table>
 
-ts-node
+## 🛠️ Tech Stack
 
-nodemon
+### **Frontend**
+```
+React + TypeScript    │ Component-based UI framework
+TailwindCSS          │ Utility-first CSS framework
+SuperTokens          │ Authentication solution
+Axios               │ HTTP client for API calls
+```
 
-npm workspaces
+### **Backend**
+```
+Node.js + Express    │ Server runtime and web framework
+TypeScript          │ Type-safe JavaScript
+PostgreSQL          │ Relational database
+Stripe API          │ Payment processing & Connect
+AWS S3              │ Media storage and uploads
+Nodemailer          │ Email delivery system
+React Email         │ Email template rendering
+```
 
-🚀 Features
-🔐 University-verified authentication flow (SuperTokens)
+### **Development Tools**
+```
+ESLint              │ Code linting and formatting
+ts-node             │ TypeScript execution
+nodemon             │ Development server hot-reload
+npm workspaces      │ Monorepo management
+```
 
-💵 Stripe Connect for sellers to get paid
+## 📁 Project Structure
 
-🛒 Cart, checkout, and receipt system
-
-📧 Email flows: verification, receipts, reminders
-
-🖼 Product uploads with image previews
-
-📦 Seller dashboard with order management
-
-📱 Fully responsive mobile layout
-
-📁 Directory Structure
-
+```
 mehag05-agoracode/
-├── backend/        # Express API server with Stripe, DB, Email logic
-├── frontend/       # React app using Tailwind and custom UI components
-├── package.json    # Root script hub for mono-repo
-└── README.md       # This file
-🛠️ Getting Started
-1. Clone the repo
+├── 📂 backend/                 # Express API server
+│   ├── 🔌 routes/             # API endpoints
+│   ├── 🗄️  models/            # Database models
+│   ├── 🛠️  middleware/        # Custom middleware
+│   └── 📧 services/           # Email, Stripe, AWS services
+├── 📂 frontend/               # React application
+│   ├── 🧩 components/         # Reusable UI components
+│   ├── 📄 pages/              # Application pages
+│   ├── 🎨 styles/             # Tailwind configurations
+│   └── 🔧 utils/              # Helper functions
+├── 📦 package.json            # Root package configuration
+└── 📖 README.md               # Project documentation
+```
+
+## 🚀 Quick Start
+
+### 1. **Clone the Repository**
+```bash
 git clone https://github.com/yourusername/agora.git
 cd mehag05-agoracode
-2. Install dependencies
+```
+
+### 2. **Install Dependencies**
+```bash
 npm install
-3. Environment setup
-Create .env files for both frontend and backend. Include:
+```
 
-Backend (/backend/.env)
+### 3. **Environment Configuration**
 
-MONGODB_URI=
-DB_NAME=
-PORT=
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
+Create the following environment files:
+
+#### **Backend** (`/backend/.env`)
+```env
+# Database
+MONGODB_URI=your_mongodb_connection_string
+DB_NAME=agora_db
+PORT=3001
+
+# AWS Configuration
+AWS_ACCESS_KEY_ID=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
 AWS_REGION=us-west-1
-AWS_S3_BUCKET_NAME=
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-RESEND_API_KEY=
-SUPERTOKENS_API_KEY=
+AWS_S3_BUCKET_NAME=your_s3_bucket_name
 
-REACT_APP_STRIPE_PUBLISHABLE_KEY=
+# Payment Processing
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
+
+# Email Service
+RESEND_API_KEY=your_resend_api_key
+
+# Authentication
+SUPERTOKENS_API_KEY=your_supertokens_api_key
+
+# Application URLs
 WEBSITE_URL=http://localhost:3000
 API_URL=http://localhost:3001
 
-CONVERTAPI_SECRET_KEY=
+# Document Conversion
+CONVERTAPI_SECRET_KEY=your_convertapi_key
+```
 
-Frontend (/frontend/.env)
-
+#### **Frontend** (`/frontend/.env`)
+```env
+# Build Configuration
 SKIP_PREFLIGHT_CHECK=true
 
+# API Configuration
 REACT_APP_API_BASE_URL=http://localhost:3001
-
-MONGODB_URI=
-DB_NAME=
-
-REACT_APP_STRIPE_PUBLISHABLE_KEY=
-STRIPE_SECRET_KEY=
 REACT_APP_BASE_URL=http://localhost:3000
 
-4. Run the app
+# Payment Processing
+REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key
+
+# Database (if needed for client-side operations)
+MONGODB_URI=your_mongodb_connection_string
+DB_NAME=agora_db
+```
+
+### 4. **Launch the Application**
+```bash
 npm run dev
-🧪 Scripts
-Script	What it does
-npm run dev	Runs frontend and backend together
-npm run build	Builds both frontend & backend
-npm run lint	Runs ESLint on all files
-npm start	Runs frontend + backend production
+```
+
+🎉 **That's it!** Your Agora marketplace should now be running at `http://localhost:3000`
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | 🚀 Runs frontend and backend in development mode |
+| `npm run build` | 🏗️ Builds both frontend & backend for production |
+| `npm run lint` | 🔍 Runs ESLint on all project files |
+| `npm start` | ⚡ Runs frontend + backend in production mode |
+
+## 🤝 Contributing
+
+We welcome contributions to make Agora even better! Please feel free to:
+
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. 💾 Commit your changes (`git commit -m 'Add amazing feature'`)
+4. 📤 Push to the branch (`git push origin feature/amazing-feature`)
+5. 🔄 Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+Having issues? We're here to help!
+
+- 🌐 **Website**: [shopatagora.com](https://www.shopatagora.com)
+- 📧 **Email**: support@shopatagora.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/agora/issues)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for college students everywhere**
+
+*Empowering campus communities through trusted peer-to-peer commerce*
+
+</div>
